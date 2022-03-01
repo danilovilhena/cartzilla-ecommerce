@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Cartzilla e-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and inspired by [Cartzilla](https://themes.getbootstrap.com/preview/?theme_id=35287).
 
 ## Available Scripts
 
