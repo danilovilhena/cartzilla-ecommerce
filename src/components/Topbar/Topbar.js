@@ -37,6 +37,7 @@ const Topbar = () => {
               id="dropdownLanguage"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              aria-label={language.name + ", " + currency.name}
             >
               <img src={language.flag} alt={language.alt}></img> {language.name.substring(0, 3)} / {currency.symbol}
             </a>
