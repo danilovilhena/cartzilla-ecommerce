@@ -1,3 +1,8 @@
 :root {
-  --bs-font-sans-serif: "Rubik", sans-serif;
+    --bs-font-sans-serif: "Rubik", sans-serif;
+    --color-primary: #fe696a;
+}
+
+* {
+    transition: all 0.25s linear;
 }
