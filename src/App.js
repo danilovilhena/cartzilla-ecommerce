@@ -1,11 +1,15 @@
 import "./App.css";
 import Topbar from "./components/Topbar/Topbar";
+import Header from "./components/Header/Header";
 
 const App = () => {
   return (
-    <div className="App">
-      <Topbar />
-    </div>
+    <>
+      <header>
+        <Topbar />
+        <Header />
+      </header>
+    </>
   );
 };
 
