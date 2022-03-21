@@ -54,7 +54,7 @@ const Topbar = () => {
               {languages
                 .filter(el => el.name !== language.name)
                 .map(el => (
-                  <li role="button" onClick={onChangeLanguage}>
+                  <li role="button" onClick={onChangeLanguage} key={el.name}>
                     <img src={el.flag} alt={el.alt}></img>
                     {el.name}
                   </li>

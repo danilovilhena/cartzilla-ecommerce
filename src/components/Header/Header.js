@@ -20,9 +20,11 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container d-flex justify-content-between align-items-center py-2">
-        <img src={Logo} alt="Logo Cartzilla"></img>
+        <a href="/">
+          <img src={Logo} alt="Logo Cartzilla" className="logo"></img>
+        </a>
         {/* Search bar */}
-        <div className="input-group flex-nowrap">
+        <div className="input-group flex-nowrap" id="search-bar">
           <i className="bi bi-search" role="img" aria-label="Search"></i>
           <input
             type="text"
@@ -33,7 +35,9 @@ const Header = () => {
           />
           <select className="form-select" aria-label="Select category">
             {categories.map(el => (
-              <option value={el}>{el}</option>
+              <option value={el} key={el}>
+                {el}
+              </option>
             ))}
           </select>
         </div>
@@ -49,8 +53,8 @@ const Header = () => {
         <button className="dropdown-toggle" id="dropdownCart" data-bs-toggle="dropdown" aria-expanded="false">
           <div className="position-relative">
             <i className="bi bi-cart"></i>
-            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-              <span class="visually-hidden">4 itens in cart</span>
+            <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span className="visually-hidden">4 itens in cart</span>
             </span>
           </div>
           <p>My Cart</p>

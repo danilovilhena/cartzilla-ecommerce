@@ -14,10 +14,10 @@ const CartWidget = props => {
   ];
 
   return (
-    <div class="dropdown-menu" aria-labelledby={props.parentId}>
+    <div className="dropdown-menu" aria-labelledby={props.parentId}>
       <ul>
         {cartItems.map(el => (
-          <li>
+          <li key={el.name}>
             <CartWidgetItem name={el.name} href={el.href} price={el.price} quantity={el.quantity} src={el.src} />
           </li>
         ))}
