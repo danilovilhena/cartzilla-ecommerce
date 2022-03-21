@@ -20,19 +20,15 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container d-flex justify-content-between align-items-center py-2">
-        <a href="/">
-          <img src={Logo} alt="Logo Cartzilla" className="logo"></img>
+        <a href="/" className="logo">
+          <img src={Logo} alt="Logo Cartzilla"></img>
         </a>
         {/* Search bar */}
-        <div className="input-group flex-nowrap" id="search-bar">
-          <i className="bi bi-search" role="img" aria-label="Search"></i>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
+        <div id="search-group">
+          <div className="input-group flex-nowrap" id="search-bar">
+            <i className="bi bi-search" role="img" aria-label="Search"></i>
+            <input type="text" placeholder="Search for products" aria-label="Search for products" />
+          </div>
           <select className="form-select" aria-label="Select category">
             {categories.map(el => (
               <option value={el} key={el}>
