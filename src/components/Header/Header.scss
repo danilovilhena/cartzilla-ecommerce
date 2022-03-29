@@ -10,9 +10,9 @@
   #search-group {
     display: flex;
     justify-content: center;
-    width: 100%;
+    flex: 1;
     font-size: 0.9375rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 
     #search-bar {
       display: flex;
@@ -47,6 +47,83 @@
         border-color: var(--color-primary);
         box-shadow: var(--color-primary-box-shadow);
       }
+    }
+  }
+
+  .navbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.875rem;
+    height: 2.875rem;
+    border-radius: 100%;
+    text-align: center;
+  }
+
+  button {
+    i {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      color: var(--bs-gray-600);
+      margin-bottom: -0.25rem;
+    }
+
+    b {
+      font-size: 0.875rem;
+      font-weight: normal;
+      color: var(--bs-gray-700);
+    }
+
+    &:focus-within,
+    &:hover,
+    &:focus,
+    &:active {
+      b {
+        color: var(--bs-black);
+      }
+    }
+
+    div:last-child {
+      text-align: left;
+    }
+  }
+
+  #acc-button {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+  }
+
+  #cart-button {
+    display: flex;
+    align-items: center;
+
+    .navbar-icon {
+      background-color: var(--bs-gray-300);
+    }
+
+    .badge {
+      color: #fff;
+      background-color: #fe696a;
+      font-weight: normal;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -15%;
+      right: -15%;
+    }
+
+    .position-relative {
+      margin-right: 1rem;
+    }
+
+    &::after {
+      margin-top: 0.75rem;
     }
   }
 }

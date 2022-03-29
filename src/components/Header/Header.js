@@ -19,7 +19,7 @@ const Header = () => {
   ];
   return (
     <div className="header">
-      <div className="container d-flex justify-content-between align-items-center py-2">
+      <div className="container d-flex justify-content-between align-items-center py-3">
         <a href="/" className="logo">
           <img src={Logo} alt="Logo Cartzilla"></img>
         </a>
@@ -38,25 +38,31 @@ const Header = () => {
           </select>
         </div>
         {/* Account button */}
-        <button>
-          <i className="bi bi-person"></i>
+        <button id="acc-button">
+          <div className="navbar-icon">
+            <i className="bi bi-person"></i>
+          </div>
           <div>
             <p>Hello, Sign in</p>
             <b>My Account</b>
           </div>
         </button>
         {/* Cart button */}
-        <button className="dropdown-toggle" id="dropdownCart" data-bs-toggle="dropdown" aria-expanded="false">
+        <button className="dropdown-toggle" id="cart-button" data-bs-toggle="dropdown" aria-expanded="false">
           <div className="position-relative">
-            <i className="bi bi-cart"></i>
-            <span className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-              <span className="visually-hidden">4 itens in cart</span>
+            <div className="navbar-icon">
+              <i className="bi bi-cart"></i>
+            </div>
+            <span className="position-absolute p-2 rounded-circle badge">
+              4<span className="visually-hidden">4 itens in cart</span>
             </span>
           </div>
-          <p>My Cart</p>
-          <b>$1,247.00</b>
+          <div>
+            <p>My Cart</p>
+            <b>$1,247.00</b>
+          </div>
         </button>
-        <CartWidget parentId="dropdownCart" />
+        <CartWidget parentId="cart-button" />
       </div>
     </div>
   );
