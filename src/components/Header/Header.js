@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/logo.png";
+import AccountModal from "../AccountModal/AccountModal";
 import CartWidget from "../CartWidget/CartWidget";
 import "./Header.scss";
 
@@ -38,7 +39,7 @@ const Header = () => {
           </select>
         </div>
         {/* Account button */}
-        <button id="acc-button">
+        <button id="acc-button" data-bs-toggle="modal" data-bs-target="#acc-modal">
           <div className="navbar-icon">
             <i className="bi bi-person"></i>
           </div>
@@ -62,7 +63,9 @@ const Header = () => {
             <b>$1,247.00</b>
           </div>
         </button>
+        {/* Other elements */}
         <CartWidget parentId="cart-button" />
+        <AccountModal />
       </div>
     </div>
   );
