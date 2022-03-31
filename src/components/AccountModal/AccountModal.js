@@ -9,29 +9,19 @@ const AccountModal = props => {
   };
 
   return (
-    <div className="modal fade" id="acc-modal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+    <div className="modal fade" id="acc-modal" tabIndex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
             <ul className="modal-nav">
-              <li>
-                <button
-                  onClick={() => {
-                    setSignIn(true);
-                  }}
-                  style={{cursor: isSignIn ? null : "pointer"}}
-                >
-                  <i className="bi bi-lock" />
+              <li className={isSignIn ? "active" : ""}>
+                <button onClick={() => setSignIn(true)} style={{cursor: isSignIn ? null : "pointer"}}>
+                  <i className="bi bi-unlock" />
                   Sign in
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => {
-                    setSignIn(false);
-                  }}
-                  style={{cursor: isSignIn ? "pointer" : null}}
-                >
+              <li className={!isSignIn ? "active" : ""}>
+                <button onClick={() => setSignIn(false)} style={{cursor: isSignIn ? "pointer" : null}}>
                   <i className="bi bi-person" />
                   Sign up
                 </button>
@@ -44,7 +34,7 @@ const AccountModal = props => {
               <>
                 <form onSubmit={submitForm}>
                   {/* Email */}
-                  <label className="form-label" htmlhtmlFor="email">
+                  <label className="form-label" htmlFor="email">
                     E-mail address
                   </label>
                   <input
@@ -55,12 +45,12 @@ const AccountModal = props => {
                     placeholder="johndoe@example.com"
                   />
                   {/* Password */}
-                  <label className="form-label" htmlhtmlFor="password">
+                  <label className="form-label" htmlFor="password">
                     Password
                   </label>
                   <input className="form-control" type="password" id="password" name="password" />
 
-                  <div>
+                  <div className="remember-div">
                     <div className="form-check">
                       <input className="form-check-input" type="checkbox" value="" id="rememberMe" />
                       <label className="form-check-label" htmlFor="rememberMe">
@@ -76,12 +66,12 @@ const AccountModal = props => {
               <>
                 <form onSubmit={submitForm}>
                   {/* Name */}
-                  <label className="form-label" htmlhtmlFor="name">
+                  <label className="form-label" htmlFor="name">
                     Full name
                   </label>
                   <input className="form-control" type="name" id="name" name="name" placeholder="John Doe" />
                   {/* Email */}
-                  <label className="form-label" htmlhtmlFor="email">
+                  <label className="form-label" htmlFor="email">
                     E-mail address
                   </label>
                   <input
@@ -92,13 +82,13 @@ const AccountModal = props => {
                     placeholder="johndoe@example.com"
                   />
                   {/* Password */}
-                  <label className="form-label" htmlhtmlFor="password">
+                  <label className="form-label" htmlFor="password">
                     Password
                   </label>
                   <input className="form-control" type="password" id="password" name="password" />
                   {/* Confirm Password */}
-                  <label className="form-label" htmlhtmlFor="confirm-password">
-                    Password
+                  <label className="form-label" htmlFor="confirm-password">
+                    Confirm Password
                   </label>
                   <input className="form-control" type="password" id="confirm-password" name="confirm-password" />
                   <button type="submit">Sign up</button>

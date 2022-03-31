@@ -1,0 +1,160 @@
+.modal-content {
+  border: none;
+  border-radius: 0.5rem;
+
+  * {
+    transition: all 0.125s ease-in-out !important;
+  }
+}
+
+.modal-header {
+  padding-right: 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0;
+  background-color: var(--bs-gray-100);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  .modal-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+
+    li {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--bs-gray-700);
+
+      &.active,
+      &:hover,
+      &:focus {
+        color: var(--color-primary);
+      }
+
+      &.active {
+        border-bottom: 2px solid var(--color-primary);
+      }
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+
+      i {
+        font-size: 1.125rem;
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.modal-body {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  form {
+    padding-left: 0.5rem;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  input:not([type*="checkbox"]) {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+
+    &:active,
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: var(--color-primary-box-shadow);
+    }
+  }
+
+  input[type*="checkbox"] {
+    &:checked {
+      background-color: var(--color-primary);
+      border-color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .remember-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .form-check {
+      display: inline-block;
+
+      label {
+        font-weight: 400;
+      }
+    }
+
+    a {
+      font-size: 0.875rem;
+      text-decoration: none;
+      color: var(--color-primary);
+      opacity: 0.9;
+
+      &:active,
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(254 105 106 / 90%);
+    transition: background-color 0.25s ease-in-out !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color-primary-saturated);
+    }
+  }
+}
+
+.acc-form-transition-enter {
+  opacity: 0;
+}
+
+.acc-form-transition-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.acc-form-transition-exit {
+  opacity: 1;
+}
+
+.acc-form-transition-exit-active {
+  opacity: 0;
+  transition: opacity 0s;
+}

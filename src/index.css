@@ -3,6 +3,7 @@
   --color-primary: #fe696a;
   --color-primary-rgb: rgb(254, 105, 106);
   --color-primary-box-shadow: 0 0.125rem 0.25rem rgba(254, 105, 106, 0.1);
+  --color-primary-saturated: #fe3638;
   --color-secondary: #ffb4b5;
   --color-secondary-rgb: rgb(255, 180, 181);
   --color-secondary-box-shadow: 0 0.125rem 0.25rem rgba(255, 180, 181, 0.25);
